@@ -1,0 +1,185 @@
+/* ##### Caruosel CSS ##### */
+.home .carousel-item{
+     min-height: 100vh;
+     background-position: center;
+     background-size: cover;
+     position: relative;
+     z-index: 1;
+}
+.home .carousel-item:before{
+    content: '';
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+.home .carousel-item .container{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+} 
+
+/* ##### Caruosel Text ##### */
+.home .carousel-item h2{
+font-size: 80px;
+color: #ffffff;
+margin:0 0 10px;
+opacity: 0;
+}
+.home .carousel-item p{
+    font-size: 30px;
+    margin: 0;
+    color: #eeeeee;
+    opacity: 0;
+}
+.home .carousel-item.active h2{
+    animation: fadeInLeft 0.5s ease forwards;
+}
+.home .carousel-item.active p{
+    animation: fadeInRight 0.5s ease forwards;
+}
+@keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);  
+    }
+}
+@keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);  
+    }
+}
+
+/* ##### Caruosel Control CSS ##### */
+
+.home .carousel-controls{
+position: absolute;
+left: 50%;
+bottom: 40px;
+z-index: 10;
+transform: translateX(-50%);
+
+}
+.home .carousel-indicators{
+    position: relative;
+    margin: 0;
+}
+.home .carousel-indicators li{
+    height: 70px;
+    width: 70px;
+    margin: 0.5px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid transparent;
+    transition: all 0.3s linear;
+}
+.home .carousel-indicators li.active{
+    border-color: #ffffff;
+    transform: scale(1.1);
+}
+.home .carousel-control-next, .home .carousel-control-prev{
+height: 60px;
+width: 60px;
+background-color: red;
+opacity: 1;
+z-index: 3;
+top:50%;
+transform: translateX(-50%  );
+border-radius: 50%;
+
+}
+.home .carousel-control-next{
+    right: -90px;
+}
+.home .carousel-control-prev{
+    left: -90px;
+}
+.bi .bi-arrow-right-circle,.bi .bi-arrow-right-circle{
+    width: 30px;
+}
+
+/* ##### Conunter CSS ##### */
+.counter-section{
+    background-color: cyan;
+    padding: 2.5rem 0;
+}
+.counter-section p{
+    color: #ffffff;
+    text-transform: uppercase;
+}
+/* ##### Parlexx Effect ##### */
+.book-food{
+    width: 100%;
+    background: url(paralex.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0 71.9125px;
+    padding: 4.375rem 0;
+}
+
+
+/* ##### Testimonial CSS ##### */
+.testimonial-section{
+    background-color: rgb(207, 20, 89);
+}
+.testimonial-section .carousel-item{
+    margin-top: 3rem;
+    padding: 10rem 3.125rem;
+    border-radius: 0.9375rem;
+    background-color: #2fb679;
+    text-align: center;
+}
+.testimonial-section .carousel-caption img{
+max-width: 5rem;
+border-radius: 50%;
+padding: 0.3125rem;
+}
+.testimonial-section .carousel-item .carousel-caption p{
+    font-size: 1.3125rem;
+    line-height: 2.0625rem;
+    padding: 0 11% 0.625rem;
+    color: aqua;
+}
+.testimonial-section .carousel-item .carousel-caption h5{
+    color: red;
+}
+.testimonial-section .carousel-indicators{
+    bottom: -2.8125rem;
+    color: #d51187;
+}
+.testimonial-section .carousel-indicators button{
+    width: 15px;
+    height: 15px;
+    outline: none;
+    border-radius: 50%;
+    border: none;
+    margin-right: 1rem;
+    opacity: 0.2;
+    color: black;
+}
+.testimonial-section .carousel-indicators button.active{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
